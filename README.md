@@ -23,7 +23,7 @@ _NOTE: There is an [article about this library](https://www.thereformedprogramme
 This example scans the assembly where you call the AutoRegisterDi's `RegisterAssemblyPublicNonGenericClasses` method for all the classes which has one or more public interfaces and the Class's name ends with "Service" are registered with .NET's 
 
 ```c#
-public void ConfigureServices(IServiceCollection services)
+public void ConfigureServices(IServiceCollection service)
 {
    //... other configure code removed
 
@@ -37,7 +37,7 @@ public void ConfigureServices(IServiceCollection services)
 This example scans the three assemblies and registers *all* the classes that have one or more public interfaces. That's because I have commented out the `.Where(c => c.Name.EndsWith("Service"))` method.
 
 ```c#
-public void ConfigureServices(IServiceCollection services)
+public void ConfigureServices(IServiceCollection service)
 {
    //... other configure code removed
 
